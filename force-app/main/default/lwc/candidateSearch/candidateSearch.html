@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Candidate Search">
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item size="3" padding="around-small">
+                <lightning-input type="text" label="Mobile Number"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="3" padding="around-small">
+                <lightning-input type="Date" label="Date Of Birth"></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-button class="slds-align_absolute-center" variant="Brand" label="Search" title="Search"
+            onclick={handleSearch}></lightning-button><br />
+        <template if:true={searchResultAvailable}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <th class="" scope="col">
+                        <div class="slds-truncate slds-align_absolute-center" title="Name">Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate slds-align_absolute-center" title="Qualification">Qualification</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate slds-align_absolute-center" title="Experience">Experience</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Apply"></div>
+                    </th>
+                </thead>
+                <tbody>
+                    <!--<tr>
+                        <th scope="col">
+                            <div>{candidateDetail.Name}</div>
+                        </th>
+                        <th scope="col">
+                            <div>{candidateDetail.Name}</div>
+                        </th>
+                        <th scope="col">
+                            <div>{candidateDetail.Name}</div>
+                        </th>
+                        <th scope="col">
+                            <div><lightning-button label="Apply" variant="Brand" onclick={existingCandidateApply} ></lightning-button></div>
+                        </th>
+                    </tr>-->
+                </tbody>
+            </table>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="job-search" icon-name="utility:hierarchy">
+        <div class="slds-card__body slds-card__body-inner">
+            <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <lightning-input onchange={handleSkills} label="Skills" value={skills}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-input onchange={handleExperience} label="Experience" value={experience}></lightning-input>
+            </lightning-layout-item>
+           </lightning-layout>
+           <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <lightning-input onchange={handleLocation} label="Location" value={location}></lightning-input>
+            </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <lightning-button onclick={handleClick} variant="brand" label="Search"></lightning-button>            </lightning-layout-item>  
+            </lightning-layout>
+        </div>
+    </lightning-card>   
+</template>
